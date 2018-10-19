@@ -1,0 +1,65 @@
+#!/bin/sh
+
+# assuming that we want to allow users to use singularity images as a method of packaging software,
+# we need a mechanism to expose and standardize deployment of such singularity iamges.
+
+# we enforce that each application (not same as singularity "app") will have one or many versions. this is
+# done by having version directories underneath each app directory; eg
+#   app_1/version_1
+#   app_1/version_2
+#   app_2/version_A
+#   ...
+
+# the singularity image should then be placed under the appropriate version directory with an .img extension
+
+# we assume that each image will be used via `exec` and that there are binaries available exposed within the 
+# images PATH, such that calling `singularity exec <image_path> <binary>` will run the binary
+
+# we therefore need to enumerate the list of binaries available in the image by listing them in a `bin.files` 
+# directory. this will then be used to literally create a thin shell wrapper script to call the approriate
+# singularity command to run that binary. this is created under a `bin` folder under each version directory.
+
+# in order to expose the applications and versions available to users, this script also creates a simple 
+# modulefile under `modules` that essentially contains a prepend-path statement. users can then use
+# `module avail` and `module load` commands as normal.
+
+# summary of file structure
+
+# images/<app>/<version>/<app>.img - singularity image
+#                       /bin/*     - thin wrapper scripts to exec singularity binary
+#                       /bin.files - a list of the bin to generate in above folder
+# modules/<app>@<version>          - modulefile that this generates
+
+
+TEMPLATE=images/TEMPLATE
+
+for img in `find . -name '*.*img'`; do
+  echo =========
+  IFS=/ read -a arr <<< "$img"
+  app=${arr[2]}
+  echo ' app     : ' ${app}
+  version=${arr[3]}
+  echo ' version : ' ${version}
+  pwd="$(pwd)"
+  image_path=${pwd}/${img}
+  echo ' image   : ' ${image_path}
+  app_path=${pwd}/images/${app}/${version}
+  echo ' app_path: ' ${app_path}
+  bin_files=${app_path}/bin.files
+
+  # create the bin files 
+  mkdir -p ${app_path}/bin
+  for bin in `cat $bin_files`; do
+    echo '  -- ' $bin
+    cp -f ${TEMPLATE} ${app_path}/bin/$bin    
+    sed -i "s:^IMAGE=.*$:IMAGE=${image_path}:g" ${app_path}/bin/$bin
+  done
+
+  module_file=modules/${app}\@${version}
+  cat << EOF > ${module_file}
+#%Module1.0
+prepend-path PATH "$app_path/bin"
+EOF
+
+done
+

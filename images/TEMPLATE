@@ -1,0 +1,16 @@
+#!/bin/sh
+
+IMAGE=blah
+SINGULARITY=singularity
+
+MOUNTS=''
+if [ -d /gpfs ]; then
+  MOUNTS='/gpfs'
+fi
+if [ -d /nfs ]; then
+  MOUNTS=$MOUNTS,/nfs
+fi
+if [ -d /scratch ]; then
+  MOUNTS=$MOUNTS,/scratch
+fi 
+exec ${SINGULARITY} exec --nv -B ${MOUNTS} ${IMAGE} $(basename "$0")  "$@"
