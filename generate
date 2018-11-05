@@ -45,8 +45,11 @@ for img in `find . -name '*.*img'`; do
   echo ' image   : ' ${image_path}
   app_path=${pwd}/images/${app}/${version}
   echo ' app_path: ' ${app_path}
-  bin_files=${app_path}/bin.files
-
+  # look in parent directory first and use that bin.file if no pwd one exists
+  bin_files=${app_path}/../bin.files
+  if [ -f ${app_path}/bin.files ]; then
+    bin_files=${app_path}/bin.files
+  fi
   # create the bin files 
   mkdir -p ${app_path}/bin
   while IFS='' read -r line || [[ -n "$line" ]]; do 
