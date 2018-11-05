@@ -49,11 +49,17 @@ for img in `find . -name '*.*img'`; do
 
   # create the bin files 
   mkdir -p ${app_path}/bin
-  for bin in `cat $bin_files`; do
-    echo '  -- ' $bin
+  while IFS='' read -r line || [[ -n "$line" ]]; do 
+    args=($line)
+    bin=${args[0]}
+    gpu=$( case "${args[@]}" in  *"gpu"*) echo "found" ;; esac )
     cp -f ${TEMPLATE} ${app_path}/bin/$bin    
+    echo '  -- ' $bin "  gpu: " $gpu
     sed -i "s:^IMAGE=.*$:IMAGE=${image_path}:g" ${app_path}/bin/$bin
-  done
+    if [ "$gpu" == "found" ]; then
+      sed -i "s:^GPU=.*$:GPU=--nv:g" ${app_path}/bin/$bin
+   fi
+  done < "$bin_files"
 
   module_file=modules/${app}\@${version}
   cat << EOF > ${module_file}
