@@ -1,0 +1,17 @@
+#!/bin/sh
+
+IMAGE=/afs/slac/package/singularity/./images/icon-gpu/1.2.9/icon-gpu@1.2.9.simg
+SINGULARITY=singularity
+GPU=
+
+MOUNTS=''
+if [ -d /gpfs ]; then
+  MOUNTS='/gpfs'
+fi
+if [ -d /nfs ]; then
+  MOUNTS=$MOUNTS,/nfs
+fi
+if [ -d /scratch ]; then
+  MOUNTS=$MOUNTS,/scratch
+fi 
+exec ${SINGULARITY} exec ${GPU} -B ${MOUNTS} ${IMAGE} $(basename "$0")  "$@"

@@ -1,0 +1,42 @@
+bokeh
+dask-mpi     gpu
+dask-remote     gpu
+dask-scheduler     gpu
+dask-ssh
+dask-submit
+dask-worker     gpu
+f2py
+ipython     gpu
+ipython3     gpu
+jupyter     gpu
+jupyterhub
+jupyterhub-singleuser
+jupyter-bundlerextension
+jupyter-kernel
+jupyter-kernelspec
+jupyter-lab     gpu
+jupyter-labextension
+jupyter-labhub
+jupyter-migrate
+jupyter-nbconvert
+jupyter-nbextension
+jupyter-notebook
+jupyter-run
+jupyter-serverextension
+jupyter-troubleshoot
+jupyter-trust
+kaggle
+nbdiff
+nbdiff-web
+nbdime
+nbshow
+numba
+papermill    gpu
+python    gpu
+python3    gpu
+python3.6    gpu
+python3.6m   gpu
+tensorboard   gpu
+tflite_convert
+theano-cache
+theano-nose

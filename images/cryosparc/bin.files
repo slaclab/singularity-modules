@@ -1,0 +1,3 @@
+cryosparcw  gpu
+#cryosparcm	gpu,slurm
+cryosparc-server	gpu,slurm

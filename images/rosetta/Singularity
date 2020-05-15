@@ -3,7 +3,8 @@ from: ubuntu:16.04
 
 %environment
 
-PATH=/opt/rosetta_src_2018.33.60351_bundle/main/source/build/src/release/linux/3.10/64/x86/gcc/5.4/default:${PATH}
+PATH=/opt/rosetta_src_2018.33.60351_bundle/main/source/build/src/release/linux/3.10/64/x86/gcc/5.4/mpi:${PATH}
+#/opt/rosetta_src_2018.33.60351_bundle/main/source/build/src/release/linux/3.10/64/x86/gcc/5.4/default:${PATH}
 
 %files
 

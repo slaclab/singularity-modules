@@ -1,0 +1,10 @@
+
+
+summary:
+
+ubuntu 18.04 container with apt-get openmpi (2.1.1) doesn't work with
+
+mpirun -n 4 singularity exec openmpi.simg  /usr/bin/ring
+
+
+but when compiled with newer version inside a centos7 or ubuntu1804 os from git, it works fine

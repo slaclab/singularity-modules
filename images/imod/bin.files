@@ -1,4 +1,4 @@
-3dmod
+3dmod  gpu
 3dmodv
 addtostack
 adocxmlconv
@@ -96,7 +96,7 @@ header
 howflared
 idfprocess
 imavgstat
-imod
+imod  gpu
 imod2meta
 imod2obj
 imod2patch
@@ -253,3 +253,5 @@ xfproduct
 xfsimplex
 xftoxg
 xyzproj
+glxgears
+glxinfo

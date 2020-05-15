@@ -1,0 +1,36 @@
+# expose job wall clock limits
+export RELION_VERSION=3.0.6
+
+export RELION_MPIRUN=5
+export RELION_QSUB_NRMPI=5
+export RELION_MPI_MAX=512
+
+export RELION_ERROR_LOCAL_MPI=4
+export RELION_THREAD_MAX=4
+export RELION_QSUB_NRTHREADS=4
+
+export RELION_QSUB_EXTRA_COUNT=5
+export RELION_QSUB_EXTRA1=Walltime
+export RELION_QSUB_EXTRA1_DEFAULT="1-00:00:00"
+export RELION_QSUB_EXTRA1_HELP="Max run time of job in D-HH:MM:SS; entering large values will likely reduce your priority in the queue"
+export RELION_QSUB_EXTRA2="Memory per CPU"
+export RELION_QSUB_EXTRA2_DEFAULT="3800m"
+export RELION_QSUB_EXTRA2_HELP="Request the amount of memory per CPU; most machines have 192GB, so limit this value to less than 192GB / ( Number MPI Procs * Number of Threads )"
+export RELION_QSUB_EXTRA3="GPUs (clear to remove)"
+export RELION_QSUB_EXTRA3_DEFAULT="--gpus 4"
+export RELION_QSUB_EXTRA3_HELP="Type and number of GPUs to request; syntax is '--gpus <number>' or '--gpus <type>:<number>' valid values include '--gpus 4', '--gpus 10', '--gpus geforce_gtx_1080_ti:10', '--gpus geforce_rtx_2080_ti:10' and '--gpus v100:4'"
+export RELION_QSUB_EXTRA4="Additional Directives (1)"
+export RELION_QSUB_EXTRA4_DEFAULT=""
+export RELION_QSUB_EXTRA5="Additional Directives (2)"
+export RELION_QSUB_EXTRA5_DEFAULT='-N 1'
+export RELION_QUEUE_NAME="--partition=cryoem --account=cryoem --qos=normal"
+export RELION_QUEUE_NAME_HELP="Slurm queue parameters: TBA"
+export RELION_QSUB_COMMAND="sbatch "
+export RELION_MINIMUM_DEDICATED=4
+export RELION_ALLOW_CHANGE_MINIMUM_DEDICATED=0
+
+# setting this to true unfortunately prevents things like particle picking etc.
+#export RELION_QUEUE_USE="false"
+
+# other envs
+export RELION_QSUB_TEMPLATE=/afs/slac/package/singularity/images/relion/${RELION_VERSION}/slurm-batch-submission.script

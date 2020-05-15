@@ -1,0 +1,21 @@
+INFO:root:[0;96m == [[1;93m ********************************************************[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m *        python sript to run the ResMap suite.         *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m *                                                      *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m * #####   ######   ####   #    #    ##    #####        *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m * #    #  #       #       ##  ##   #  #   #    #       *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m * #    #  #####    ####   # ## #  #    #  #    #       *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m * #####   #            #  #    #  ######  #####        *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m * #   #   #       #    #  #    #  #    #  #            *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m * #    #  ######   ####   #    #  #    #  #            *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m *                                                      *[0;96m] ==[0m
+INFO:root:[0;96m == [[1;93m ********************************************************[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mMessage class instantiated, log: ResMaps.log[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mCommon class has been instantiated.[0;96m] ==[0m
+INFO:root:[0;96m == [ResMap Version  : [1;97m1.95[1;92m[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mOperating System:[1;92m Linux[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mOS time stamp   :[1;93m #1 SMP Fri Feb 1 14:54:57 UTC 2019[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mRelease         :[1;95m 3.10.0-957.5.1.el7.x86_64[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mKernel          :[1;96m Linux-3.10.0-957.5.1.el7.x86_64-x86_64-with-Ubuntu-16.04-xenial[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mNode            :[1;93m ocio-gpu01[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mProcessor type  :[1;95m x86_64[0;96m] ==[0m
+INFO:root:[0;96m == [[0;94mCPU cores count :[1;92m 48[0;96m] ==[0m

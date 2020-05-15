@@ -1,0 +1,36 @@
+FROM slaclab/intel-parallel-studio:2019.u4
+
+RUN apt-get update \
+    && apt-get install -y \
+      gcc g++ cmake build-essential autoconf automake libtool flex bison \
+      git curl 
+
+#ARG OMPI_VER=4.0.1
+ARG OMPI_VER=3.1.4
+
+ENV OMPI_ROOT=/opt/openmpi-${OMPI_VER}
+###
+# install openmpi
+###
+RUN TMPDIR=`mktemp -d -t` \
+  && cd ${TMPDIR} \
+  && git clone https://github.com/open-mpi/ompi.git \
+  && cd ompi \
+  && git checkout v${OMPI_VER} \
+  && . ${INTEL_COMPILEVARS} \
+  && . ${INTEL_MKLVARS} \
+  && ./autogen.pl \
+  && ./configure --prefix=${OMPI_ROOT} --enable-mpi-cxx CC=icc CXX=icpc F77=ifort FC=ifort CFLAGS=-m64 CXXFLAGS=-m64 FFLAGS=-m64 FCFLAGS=-m64 \
+  && make -j 16 \
+  && make install \
+  && ${OMPI_ROOT}/bin/mpicc examples/ring_c.c -o ${OMPI_ROOT}/bin/mpi_ring \
+  && rm -rf ${TMPDIR}
+
+# add to ldconf
+RUN echo '\n\
+/opt/openmpi-${OMPI_VER}/lib \n\
+/opt/openmpi-${OMPI_VER}/lib/openmpi \n\
+/opt/openmpi-${OMPI_VER}/lib/pmix \n'\
+>> /etc/ld.so.conf.d/openmpi.conf
+RUN ldconfig
+ENV PATH="/opt/openmpi-${OMPI_VER}/bin/:${PATH}"

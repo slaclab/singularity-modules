@@ -1,0 +1,12 @@
+# expose job wall clock limits
+export RELION_QSUB_EXTRA1=Walltime
+export RELION_QSUB_EXTRA1_DEFAULT="25:00"
+#export RELION_QSUB_EXTRA2="Number of GPUs per MPI rank"
+#export RELION_QSUB_EXTRA2_DEFAULT="1"
+
+export RELION_QUEUE_NAME="slacgpu"
+export RELION_QSUB_COMMAND="bsub < "
+#export RELION_QUEUE_USE="false"
+
+# other envs
+export RELION_QSUB_TEMPLATE=/afs/slac/package/singularity/images/relion/2.1/lsf-batch-submission_gpu.script

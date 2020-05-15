@@ -1,0 +1,5 @@
+vncserver
+vncpasswd
+xfconf-query
+xfce4-session
+websockify

@@ -1,0 +1,29 @@
+#!/bin/bash -l
+ 
+#SBATCH --job-name=XXXnameXXX
+#SBATCH --partition=XXXqueueXXX
+#SBATCH --ntasks=XXXmpinodesXXX
+#SBATCH --gpu=XXXextra4XXX
+#SBATCH --time=XXXextra1XXX
+#SBATCH --error=XXXerrfileXXX
+#SBATCH --output=XXXoutfileXXX
+ 
+# other
+# threads: XXXthreadsXXX
+# cores: XXXcoresXXX
+# dedicated: span[ptile=XXXdedicatedXXX]
+# mem: XXXextra2XXX
+# unused: XXXextra3XXX
+
+# setup environment
+source /etc/profile.d/modules.sh
+export MODULEPATH=/usr/share/Modules/modulefiles:/opt/modulefiles:/afs/slac/package/singularity/modulefiles
+module purge
+module load PrgEnv-gcc
+module load relion/${RELION_VERSION}
+
+# set tmpdir for relion
+export TMPDIR=/scratch/${USER}/${SLURM_JOB_ID}/TMPDIR/
+
+# run relion
+mpirun --mca btl tcp,self  XXXcommandXXX 

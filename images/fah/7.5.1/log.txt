@@ -1,0 +1,408 @@
+*********************** Log Started 2020-03-18T02:41:20Z ***********************
+02:41:20:************************* Folding@home Client *************************
+02:41:20:      Website: https://foldingathome.org/
+02:41:20:    Copyright: (c) 2009-2018 foldingathome.org
+02:41:20:       Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+02:41:20:         Args: --user=ytl --team=243328 --gpu=true --smp=true --power=full
+02:41:20:       Config: <none>
+02:41:20:******************************** Build ********************************
+02:41:20:      Version: 7.5.1
+02:41:20:         Date: May 11 2018
+02:41:20:         Time: 19:59:04
+02:41:20:   Repository: Git
+02:41:20:     Revision: 4705bf53c635f88b8fe85af7675557e15d491ff0
+02:41:20:       Branch: master
+02:41:20:     Compiler: GNU 6.3.0 20170516
+02:41:20:      Options: -std=gnu++98 -O3 -funroll-loops
+02:41:20:     Platform: linux2 4.14.0-3-amd64
+02:41:20:         Bits: 64
+02:41:20:         Mode: Release
+02:41:20:******************************* System ********************************
+02:41:20:          CPU: Intel(R) Xeon(R) Silver 4110 CPU @ 2.10GHz
+02:41:20:       CPU ID: GenuineIntel Family 6 Model 85 Stepping 4
+02:41:20:         CPUs: 32
+02:41:20:       Memory: 187.09GiB
+02:41:20:  Free Memory: 136.88GiB
+02:41:20:      Threads: POSIX_THREADS
+02:41:20:   OS Version: 3.10
+02:41:20:  Has Battery: false
+02:41:20:   On Battery: false
+02:41:20:   UTC Offset: -7
+02:41:20:          PID: 30890
+02:41:20:          CWD: /afs/slac.stanford.edu/package/singularity/images/fah/7.5.1
+02:41:20:           OS: Linux 3.10.0-1062.9.1.el7.x86_64 x86_64
+02:41:20:      OS Arch: AMD64
+02:41:20:         GPUs: 0
+02:41:20:CUDA Device 0: Platform:0 Device:0 Bus:97 Slot:0 Compute:7.0 Driver:10.2
+02:41:20:CUDA Device 1: Platform:0 Device:1 Bus:98 Slot:0 Compute:7.0 Driver:10.2
+02:41:20:CUDA Device 2: Platform:0 Device:2 Bus:137 Slot:0 Compute:7.0 Driver:10.2
+02:41:20:CUDA Device 3: Platform:0 Device:3 Bus:138 Slot:0 Compute:7.0 Driver:10.2
+02:41:20:       OpenCL: Not detected: clGetPlatformIDs() returned -1001
+02:41:20:***********************************************************************
+02:41:20:<config>
+02:41:20:  <!-- Folding Slots -->
+02:41:20:</config>
+02:41:20:Connecting to assign1.foldingathome.org:8080
+02:41:20:Updated GPUs.txt
+02:41:20:Read GPUs.txt
+02:41:20:Trying to access database...
+02:41:21:Successfully acquired database lock
+02:41:21:FS00:Set client configured
+02:41:21:Enabled folding slot 00: READY cpu:28
+02:41:21:Enabled folding slot 01: READY gpu:0:GV100GL [Tesla V100 SXM2 32GB]
+02:41:21:Enabled folding slot 02: READY gpu:1:GV100GL [Tesla V100 SXM2 32GB]
+02:41:21:Enabled folding slot 03: READY gpu:2:GV100GL [Tesla V100 SXM2 32GB]
+02:41:21:Enabled folding slot 04: READY gpu:3:GV100GL [Tesla V100 SXM2 32GB]
+02:41:21:WU00:FS00:Connecting to 65.254.110.245:8080
+02:41:21:WU01:FS01:Connecting to 65.254.110.245:8080
+02:41:21:WU02:FS02:Connecting to 65.254.110.245:8080
+02:41:21:WU03:FS03:Connecting to 65.254.110.245:8080
+02:41:21:WU04:FS04:Connecting to 65.254.110.245:8080
+02:41:21:WU00:FS00:Connecting to 65.254.110.245:8080
+02:41:21:WU01:FS01:Connecting to 65.254.110.245:8080
+02:41:21:WU02:FS02:Connecting to 65.254.110.245:8080
+02:41:21:WU03:FS03:Connecting to 65.254.110.245:8080
+02:41:21:WU04:FS04:Connecting to 65.254.110.245:8080
+[93m02:41:21:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:21:WU00:FS00:Connecting to 18.218.241.186:80
+[93m02:41:21:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:21:WU01:FS01:Connecting to 18.218.241.186:80
+[93m02:41:21:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:21:WU02:FS02:Connecting to 18.218.241.186:80
+[93m02:41:21:WARNING:WU03:FS03:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:21:WU03:FS03:Connecting to 18.218.241.186:80
+[93m02:41:21:WARNING:WU04:FS04:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:21:WU04:FS04:Connecting to 18.218.241.186:80
+[93m02:41:21:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:41:21:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+02:41:22:WU01:FS01:Assigned to work server 128.252.203.10
+02:41:22:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:41:22:WU01:FS01:Connecting to 128.252.203.10:8080
+02:41:22:WU03:FS03:Assigned to work server 128.252.203.10
+02:41:22:WU03:FS03:Requesting new work unit for slot 03: READY gpu:2:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:41:22:WU02:FS02:Assigned to work server 128.252.203.10
+02:41:22:WU03:FS03:Connecting to 128.252.203.10:8080
+02:41:22:WU02:FS02:Requesting new work unit for slot 02: READY gpu:1:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:41:22:WU02:FS02:Connecting to 128.252.203.10:8080
+02:41:22:WU04:FS04:Assigned to work server 128.252.203.10
+02:41:22:WU04:FS04:Requesting new work unit for slot 04: READY gpu:3:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:41:22:WU04:FS04:Connecting to 128.252.203.10:8080
+02:41:22:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m02:41:22:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:22:WU00:FS00:Connecting to 18.218.241.186:80
+[93m02:41:22:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:41:22:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+[91m02:41:55:ERROR:WU04:FS04:Exception: 10002: Received short response, expected 512 bytes, got 0[0m
+[91m02:41:55:ERROR:WU01:FS01:Exception: 10002: Received short response, expected 512 bytes, got 0[0m
+02:41:55:WU04:FS04:Connecting to 65.254.110.245:8080
+[91m02:41:55:ERROR:WU02:FS02:Exception: 10002: Received short response, expected 512 bytes, got 0[0m
+02:41:56:WU01:FS01:Connecting to 65.254.110.245:8080
+02:41:56:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m02:41:56:WARNING:WU04:FS04:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:56:WU04:FS04:Connecting to 18.218.241.186:80
+[93m02:41:56:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:56:WU01:FS01:Connecting to 18.218.241.186:80
+[93m02:41:56:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:41:56:WU02:FS02:Connecting to 18.218.241.186:80
+02:41:56:WU04:FS04:Assigned to work server 128.252.203.10
+02:41:56:WU04:FS04:Requesting new work unit for slot 04: READY gpu:3:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:41:56:WU04:FS04:Connecting to 128.252.203.10:8080
+02:41:56:WU01:FS01:Assigned to work server 128.252.203.10
+02:41:56:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:41:56:WU02:FS02:Assigned to work server 128.252.203.10
+02:41:56:WU01:FS01:Connecting to 128.252.203.10:8080
+02:41:56:WU02:FS02:Requesting new work unit for slot 02: READY gpu:1:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:41:56:WU02:FS02:Connecting to 128.252.203.10:8080
+02:42:09:WU03:FS03:Downloading 51.20MiB
+02:42:14:WU03:FS03:Download complete
+02:42:15:WU03:FS03:Received Unit: id:03 state:DOWNLOAD error:NO_ERROR project:11763 run:0 clone:284 gen:5 core:0x22 unit:0x0000000880fccb0a5e6d811df7986705
+02:42:16:WU03:FS03:Downloading core from http://cores.foldingathome.org/v7/lin/64bit/Core_22.fah
+02:42:16:WU03:FS03:Connecting to cores.foldingathome.org:80
+02:42:16:WU03:FS03:FahCore 22: Downloading 3.58MiB
+02:42:17:WU03:FS03:FahCore 22: Download complete
+02:42:17:WU03:FS03:Valid core signature
+02:42:17:WU03:FS03:Unpacked 9.30MiB to cores/cores.foldingathome.org/v7/lin/64bit/Core_22.fah/FahCore_22
+02:42:17:WU03:FS03:Starting
+[91m02:42:17:ERROR:WU03:FS03:Failed to start core: OpenCL device matching slot 3 not found, try setting 'opencl-index' manually[0m
+02:42:17:WU03:FS03:Starting
+[91m02:42:17:ERROR:WU03:FS03:Failed to start core: OpenCL device matching slot 3 not found, try setting 'opencl-index' manually[0m
+[91m02:42:20:ERROR:WU02:FS02:Exception: 10002: Received short response, expected 512 bytes, got 0[0m
+[91m02:42:20:ERROR:WU01:FS01:Exception: 10002: Received short response, expected 512 bytes, got 0[0m
+02:42:22:Saving configuration to config.xml
+02:42:22:<config>
+02:42:22:  <!-- Folding Slots -->
+02:42:22:  <slot id='0' type='CPU'/>
+02:42:22:  <slot id='1' type='GPU'/>
+02:42:22:  <slot id='2' type='GPU'/>
+02:42:22:  <slot id='3' type='GPU'/>
+02:42:22:  <slot id='4' type='GPU'/>
+02:42:22:</config>
+02:42:22:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m02:42:22:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:42:22:WU00:FS00:Connecting to 18.218.241.186:80
+[93m02:42:22:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:42:22:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+02:42:56:WU01:FS01:Connecting to 65.254.110.245:8080
+[93m02:42:56:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:42:56:WU01:FS01:Connecting to 18.218.241.186:80
+02:42:56:WU02:FS02:Connecting to 65.254.110.245:8080
+02:42:56:WU01:FS01:Assigned to work server 128.252.203.10
+[93m02:42:56:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:42:56:WU02:FS02:Connecting to 18.218.241.186:80
+02:42:56:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:42:56:WU01:FS01:Connecting to 128.252.203.10:8080
+02:42:57:WU02:FS02:Assigned to work server 128.252.203.10
+02:42:57:WU02:FS02:Requesting new work unit for slot 02: READY gpu:1:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:42:57:WU02:FS02:Connecting to 128.252.203.10:8080
+02:43:17:WU03:FS03:Starting
+[91m02:43:17:ERROR:WU03:FS03:Failed to start core: OpenCL device matching slot 3 not found, try setting 'opencl-index' manually[0m
+02:43:59:WU00:FS00:Connecting to 65.254.110.245:8080
+02:43:59:WU00:FS00:Assigned to work server 128.252.203.9
+02:43:59:WU00:FS00:Requesting new work unit for slot 00: READY cpu:28 from 128.252.203.9
+02:43:59:WU00:FS00:Connecting to 128.252.203.9:8080
+02:44:00:WU00:FS00:Downloading 7.64MiB
+02:44:01:WU00:FS00:Download complete
+02:44:01:WU00:FS00:Received Unit: id:00 state:DOWNLOAD error:NO_ERROR project:14402 run:0 clone:3672 gen:74 core:0xa7 unit:0x0000005680fccb095dcb2b0a9dee8496
+02:44:01:WU00:FS00:Downloading core from http://cores.foldingathome.org/v7/lin/64bit/avx/Core_a7.fah
+02:44:01:WU00:FS00:Connecting to cores.foldingathome.org:80
+02:44:01:WU00:FS00:FahCore a7: Downloading 8.91MiB
+02:44:03:WU00:FS00:FahCore a7: Download complete
+02:44:03:WU00:FS00:Valid core signature
+02:44:03:WU00:FS00:Unpacked 20.97MiB to cores/cores.foldingathome.org/v7/lin/64bit/avx/Core_a7.fah/FahCore_a7
+[93m02:44:03:WARNING:WU04:FS04:WorkServer connection failed on port 8080 trying 80[0m
+02:44:03:WU04:FS04:Connecting to 128.252.203.10:80
+02:44:04:WU00:FS00:Starting
+02:44:04:WU00:FS00:Running FahCore: /usr/bin/FAHCoreWrapper /afs/slac.stanford.edu/package/singularity/images/fah/7.5.1/cores/cores.foldingathome.org/v7/lin/64bit/avx/Core_a7.fah/FahCore_a7 -dir 00 -suffix 01 -version 705 -lifeline 30890 -checkpoint 15 -np 28
+02:44:04:WU00:FS00:Started FahCore on PID 31173
+02:44:04:WU00:FS00:Core PID:31177
+02:44:04:WU00:FS00:FahCore 0xa7 started
+02:44:04:WU00:FS00:0xa7:*********************** Log Started 2020-03-18T02:44:04Z ***********************
+02:44:04:WU00:FS00:0xa7:************************** Gromacs Folding@home Core ***************************
+02:44:04:WU00:FS00:0xa7:       Type: 0xa7
+02:44:04:WU00:FS00:0xa7:       Core: Gromacs
+02:44:04:WU00:FS00:0xa7:       Args: -dir 00 -suffix 01 -version 705 -lifeline 31173 -checkpoint 15 -np
+02:44:04:WU00:FS00:0xa7:             28
+02:44:04:WU00:FS00:0xa7:************************************ CBang *************************************
+02:44:04:WU00:FS00:0xa7:       Date: Nov 5 2019
+02:44:04:WU00:FS00:0xa7:       Time: 06:06:57
+02:44:04:WU00:FS00:0xa7:   Revision: 46c96f1aa8419571d83f3e63f9c99a0d602f6da9
+02:44:04:WU00:FS00:0xa7:     Branch: master
+02:44:04:WU00:FS00:0xa7:   Compiler: GNU 8.3.0
+02:44:04:WU00:FS00:0xa7:    Options: -std=c++11 -O3 -funroll-loops -fno-pie -fPIC
+02:44:04:WU00:FS00:0xa7:   Platform: linux2 4.19.0-5-amd64
+02:44:04:WU00:FS00:0xa7:       Bits: 64
+02:44:04:WU00:FS00:0xa7:       Mode: Release
+02:44:04:WU00:FS00:0xa7:************************************ System ************************************
+02:44:04:WU00:FS00:0xa7:        CPU: Intel(R) Xeon(R) Silver 4110 CPU @ 2.10GHz
+02:44:04:WU00:FS00:0xa7:     CPU ID: GenuineIntel Family 6 Model 85 Stepping 4
+02:44:04:WU00:FS00:0xa7:       CPUs: 32
+02:44:04:WU00:FS00:0xa7:     Memory: 187.09GiB
+02:44:04:WU00:FS00:0xa7:Free Memory: 136.66GiB
+02:44:04:WU00:FS00:0xa7:    Threads: POSIX_THREADS
+02:44:04:WU00:FS00:0xa7: OS Version: 3.10
+02:44:04:WU00:FS00:0xa7:Has Battery: false
+02:44:04:WU00:FS00:0xa7: On Battery: false
+02:44:04:WU00:FS00:0xa7: UTC Offset: -7
+02:44:04:WU00:FS00:0xa7:        PID: 31177
+02:44:04:WU00:FS00:0xa7:        CWD: /afs/slac.stanford.edu/package/singularity/images/fah/7.5.1/work
+02:44:04:WU00:FS00:0xa7:******************************** Build - libFAH ********************************
+02:44:04:WU00:FS00:0xa7:    Version: 0.0.18
+02:44:04:WU00:FS00:0xa7:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+02:44:04:WU00:FS00:0xa7:  Copyright: 2019 foldingathome.org
+02:44:04:WU00:FS00:0xa7:   Homepage: https://foldingathome.org/
+02:44:04:WU00:FS00:0xa7:       Date: Nov 5 2019
+02:44:04:WU00:FS00:0xa7:       Time: 06:13:26
+02:44:04:WU00:FS00:0xa7:   Revision: 490c9aa2957b725af319379424d5c5cb36efb656
+02:44:04:WU00:FS00:0xa7:     Branch: master
+02:44:04:WU00:FS00:0xa7:   Compiler: GNU 8.3.0
+02:44:04:WU00:FS00:0xa7:    Options: -std=c++11 -O3 -funroll-loops -fno-pie
+02:44:04:WU00:FS00:0xa7:   Platform: linux2 4.19.0-5-amd64
+02:44:04:WU00:FS00:0xa7:       Bits: 64
+02:44:04:WU00:FS00:0xa7:       Mode: Release
+02:44:04:WU00:FS00:0xa7:************************************ Build *************************************
+02:44:04:WU00:FS00:0xa7:       SIMD: avx_256
+02:44:04:WU00:FS00:0xa7:********************************************************************************
+02:44:04:WU00:FS00:0xa7:Project: 14402 (Run 0, Clone 3672, Gen 74)
+02:44:04:WU00:FS00:0xa7:Unit: 0x0000005680fccb095dcb2b0a9dee8496
+02:44:04:WU00:FS00:0xa7:Reading tar file core.xml
+02:44:04:WU00:FS00:0xa7:Reading tar file frame74.tpr
+02:44:04:WU00:FS00:0xa7:Digital signatures verified
+02:44:04:WU00:FS00:0xa7:Calling: mdrun -s frame74.tpr -o frame74.trr -x frame74.xtc -cpt 15 -nt 28
+02:44:04:WU00:FS00:0xa7:Steps: first=9250000 total=125000
+02:44:07:WU02:FS02:Downloading 51.19MiB
+02:44:11:WU00:FS00:0xa7:Completed 1 out of 125000 steps (0%)
+02:44:13:WU02:FS02:Download 94.74%
+02:44:13:WU02:FS02:Download complete
+02:44:13:WU02:FS02:Received Unit: id:02 state:DOWNLOAD error:NO_ERROR project:11763 run:0 clone:4726 gen:4 core:0x22 unit:0x0000000680fccb0a5e6d8177a7966eef
+02:44:13:WU02:FS02:Starting
+[91m02:44:13:ERROR:WU02:FS02:Failed to start core: OpenCL device matching slot 2 not found, try setting 'opencl-index' manually[0m
+02:44:13:WU02:FS02:Starting
+[91m02:44:13:ERROR:WU02:FS02:Failed to start core: OpenCL device matching slot 2 not found, try setting 'opencl-index' manually[0m
+02:44:55:WU03:FS03:Starting
+[91m02:44:55:ERROR:WU03:FS03:Failed to start core: OpenCL device matching slot 3 not found, try setting 'opencl-index' manually[0m
+02:45:02:WU00:FS00:0xa7:Completed 1250 out of 125000 steps (1%)
+[93m02:45:04:WARNING:WU01:FS01:WorkServer connection failed on port 8080 trying 80[0m
+02:45:04:WU01:FS01:Connecting to 128.252.203.10:80
+02:45:13:WU02:FS02:Starting
+[91m02:45:13:ERROR:WU02:FS02:Failed to start core: OpenCL device matching slot 2 not found, try setting 'opencl-index' manually[0m
+02:45:40:WU01:FS01:Downloading 50.73MiB
+02:45:45:WU01:FS01:Download complete
+02:45:46:WU01:FS01:Received Unit: id:01 state:DOWNLOAD error:NO_ERROR project:11762 run:0 clone:4232 gen:4 core:0x22 unit:0x0000000680fccb0a5e6d8108d9eb28f9
+02:45:46:WU01:FS01:Starting
+[91m02:45:46:ERROR:WU01:FS01:Failed to start core: OpenCL device matching slot 1 not found, try setting 'opencl-index' manually[0m
+02:45:46:WU01:FS01:Starting
+[91m02:45:46:ERROR:WU01:FS01:Failed to start core: OpenCL device matching slot 1 not found, try setting 'opencl-index' manually[0m
+02:45:51:WU00:FS00:0xa7:Completed 2500 out of 125000 steps (2%)
+[91m02:46:11:ERROR:WU04:FS04:Exception: Failed to remove directory './work/04': boost::filesystem::remove: Device or resource busy: "./work/04/.__afsEA2E"[0m
+02:46:11:WU04:FS04:Requesting new work unit for slot 04: READY gpu:3:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:46:11:WU04:FS04:Connecting to 128.252.203.10:8080
+02:46:39:WU00:FS00:0xa7:Completed 3750 out of 125000 steps (3%)
+02:46:46:WU01:FS01:Starting
+[91m02:46:46:ERROR:WU01:FS01:Failed to start core: OpenCL device matching slot 1 not found, try setting 'opencl-index' manually[0m
+02:46:50:WU02:FS02:Starting
+[91m02:46:50:ERROR:WU02:FS02:Failed to start core: OpenCL device matching slot 2 not found, try setting 'opencl-index' manually[0m
+02:47:18:WU04:FS04:Downloading 29.59MiB
+02:47:21:WU04:FS04:Download complete
+02:47:21:WU04:FS04:Received Unit: id:04 state:DOWNLOAD error:NO_ERROR project:11761 run:0 clone:6320 gen:3 core:0x22 unit:0x0000000480fccb0a5e6fcf9ebc6adb1c
+02:47:21:WU04:FS04:Starting
+[91m02:47:21:ERROR:WU04:FS04:Failed to start core: OpenCL device matching slot 4 not found, try setting 'opencl-index' manually[0m
+02:47:22:WU04:FS04:Starting
+[91m02:47:22:ERROR:WU04:FS04:Failed to start core: OpenCL device matching slot 4 not found, try setting 'opencl-index' manually[0m
+02:47:27:WU00:FS00:0xa7:Completed 5000 out of 125000 steps (4%)
+02:47:32:WU03:FS03:Starting
+[91m02:47:32:ERROR:WU03:FS03:Failed to start core: OpenCL device matching slot 3 not found, try setting 'opencl-index' manually[0m
+02:48:16:WU00:FS00:0xa7:Completed 6250 out of 125000 steps (5%)
+02:48:22:WU04:FS04:Starting
+[91m02:48:22:ERROR:WU04:FS04:Failed to start core: OpenCL device matching slot 4 not found, try setting 'opencl-index' manually[0m
+02:48:23:WU01:FS01:Starting
+[91m02:48:23:ERROR:WU01:FS01:Failed to start core: OpenCL device matching slot 1 not found, try setting 'opencl-index' manually[0m
+02:49:04:WU00:FS00:0xa7:Completed 7500 out of 125000 steps (6%)
+02:49:28:WU02:FS02:Starting
+[91m02:49:28:ERROR:WU02:FS02:Failed to start core: OpenCL device matching slot 2 not found, try setting 'opencl-index' manually[0m
+02:49:53:WU00:FS00:0xa7:Completed 8750 out of 125000 steps (7%)
+02:49:59:WU04:FS04:Starting
+[91m02:49:59:ERROR:WU04:FS04:Failed to start core: OpenCL device matching slot 4 not found, try setting 'opencl-index' manually[0m
+02:50:41:WU00:FS00:0xa7:Completed 10000 out of 125000 steps (8%)
+02:51:00:WU01:FS01:Starting
+[91m02:51:00:ERROR:WU01:FS01:Failed to start core: OpenCL device matching slot 1 not found, try setting 'opencl-index' manually[0m
+02:51:29:WU00:FS00:0xa7:Completed 11250 out of 125000 steps (9%)
+02:51:46:WU03:FS03:Starting
+[91m02:51:46:ERROR:WU03:FS03:Failed to start core: OpenCL device matching slot 3 not found, try setting 'opencl-index' manually[0m
+02:51:46:WU03:FS03:Sending unit results: id:03 state:SEND error:FAILED project:11763 run:0 clone:284 gen:5 core:0x22 unit:0x0000000880fccb0a5e6d811df7986705
+02:51:46:WU03:FS03:Connecting to 128.252.203.10:8080
+02:51:47:WU05:FS03:Connecting to 65.254.110.245:8080
+02:51:47:WU05:FS03:Assigned to work server 128.252.203.10
+02:51:47:WU05:FS03:Requesting new work unit for slot 03: READY gpu:2:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.10
+02:51:47:WU05:FS03:Connecting to 128.252.203.10:8080
+02:52:18:WU00:FS00:0xa7:Completed 12500 out of 125000 steps (10%)
+02:52:36:WU04:FS04:Starting
+[91m02:52:36:ERROR:WU04:FS04:Failed to start core: OpenCL device matching slot 4 not found, try setting 'opencl-index' manually[0m
+02:53:07:WU00:FS00:0xa7:Completed 13750 out of 125000 steps (11%)
+02:53:42:WU02:FS02:Starting
+[91m02:53:42:ERROR:WU02:FS02:Failed to start core: OpenCL device matching slot 2 not found, try setting 'opencl-index' manually[0m
+02:53:42:WU02:FS02:Sending unit results: id:02 state:SEND error:FAILED project:11763 run:0 clone:4726 gen:4 core:0x22 unit:0x0000000680fccb0a5e6d8177a7966eef
+02:53:42:WU02:FS02:Connecting to 128.252.203.10:8080
+02:53:43:WU06:FS02:Connecting to 65.254.110.245:8080
+[93m02:53:43:WARNING:WU06:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:53:43:WU06:FS02:Connecting to 18.218.241.186:80
+[93m02:53:43:WARNING:WU06:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:53:43:ERROR:WU06:FS02:Exception: Could not get an assignment[0m
+02:53:43:WU06:FS02:Connecting to 65.254.110.245:8080
+[93m02:53:43:WARNING:WU06:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:53:43:WU06:FS02:Connecting to 18.218.241.186:80
+[93m02:53:44:WARNING:WU06:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:53:44:ERROR:WU06:FS02:Exception: Could not get an assignment[0m
+[93m02:53:53:WARNING:WU03:FS03:WorkServer connection failed on port 8080 trying 80[0m
+02:53:53:WU03:FS03:Connecting to 128.252.203.10:80
+[93m02:53:54:WARNING:WU05:FS03:WorkServer connection failed on port 8080 trying 80[0m
+02:53:54:WU05:FS03:Connecting to 128.252.203.10:80
+02:53:55:WU00:FS00:0xa7:Completed 15000 out of 125000 steps (12%)
+02:54:31:WU03:FS03:Server responded WORK_ACK (400)
+02:54:31:WU03:FS03:Cleaning up
+02:54:43:WU00:FS00:0xa7:Completed 16250 out of 125000 steps (13%)
+02:54:43:WU06:FS02:Connecting to 65.254.110.245:8080
+[93m02:54:43:WARNING:WU06:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:54:43:WU06:FS02:Connecting to 18.218.241.186:80
+[93m02:54:44:WARNING:WU06:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:54:44:ERROR:WU06:FS02:Exception: Could not get an assignment[0m
+[93m02:54:52:WARNING:WU02:FS02:Exception: Failed to send results to work server: 10002: Received short response, expected 512 bytes, got 0[0m
+02:54:52:WU02:FS02:Trying to send results to collection server
+02:54:52:WU02:FS02:Connecting to 155.247.166.219:8080
+02:54:52:WU02:FS02:Server responded WORK_ACK (400)
+02:54:52:WU02:FS02:Cleaning up
+[91m02:54:52:ERROR:WU02:FS02:Exception: Failed to remove directory './work/02': boost::filesystem::remove: Device or resource busy: "./work/02/.__afs01EA"[0m
+02:54:52:WU02:FS02:Cleaning up
+[91m02:54:52:ERROR:WU02:FS02:Exception: Failed to remove directory './work/02': boost::filesystem::remove: Device or resource busy: "./work/02/.__afs01EA"[0m
+02:55:15:WU01:FS01:Starting
+[91m02:55:15:ERROR:WU01:FS01:Failed to start core: OpenCL device matching slot 1 not found, try setting 'opencl-index' manually[0m
+02:55:15:WU01:FS01:Sending unit results: id:01 state:SEND error:FAILED project:11762 run:0 clone:4232 gen:4 core:0x22 unit:0x0000000680fccb0a5e6d8108d9eb28f9
+02:55:15:WU01:FS01:Connecting to 128.252.203.10:8080
+02:55:15:WU03:FS01:Connecting to 65.254.110.245:8080
+02:55:16:WU03:FS01:Assigned to work server 128.252.203.2
+02:55:16:WU03:FS01:Requesting new work unit for slot 01: READY gpu:0:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.2
+02:55:16:WU03:FS01:Connecting to 128.252.203.2:8080
+02:55:31:WU00:FS00:0xa7:Completed 17500 out of 125000 steps (14%)
+[91m02:55:36:ERROR:WU03:FS01:Exception: 10002: Received short response, expected 512 bytes, got 0[0m
+02:55:36:WU03:FS01:Connecting to 65.254.110.245:8080
+[93m02:55:36:WARNING:WU03:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:55:36:WU03:FS01:Connecting to 18.218.241.186:80
+[93m02:55:37:WARNING:WU03:FS01:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:55:37:ERROR:WU03:FS01:Exception: Could not get an assignment[0m
+02:55:52:WU02:FS02:Cleaning up
+[91m02:55:52:ERROR:WU02:FS02:Exception: Failed to remove directory './work/02': boost::filesystem::remove: Device or resource busy: "./work/02/.__afs01EA"[0m
+02:56:01:WU01:FS01:Server responded WORK_ACK (400)
+02:56:01:WU01:FS01:Cleaning up
+[91m02:56:01:ERROR:WU01:FS01:Exception: Failed to remove directory './work/01': boost::filesystem::remove: Device or resource busy: "./work/01/.__afs017F"[0m
+02:56:02:WU01:FS01:Cleaning up
+[91m02:56:02:ERROR:WU01:FS01:Exception: Failed to remove directory './work/01': boost::filesystem::remove: Device or resource busy: "./work/01/.__afs017F"[0m
+[91m02:56:02:ERROR:WU05:FS03:Exception: Failed to connect to 128.252.203.10:80: Connection timed out[0m
+02:56:02:WU05:FS03:Connecting to 65.254.110.245:8080
+02:56:02:WU05:FS03:Assigned to work server 128.252.203.2
+02:56:02:WU05:FS03:Requesting new work unit for slot 03: READY gpu:2:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.2
+02:56:02:WU05:FS03:Connecting to 128.252.203.2:8080
+02:56:20:WU00:FS00:0xa7:Completed 18750 out of 125000 steps (15%)
+02:56:21:WU06:FS02:Connecting to 65.254.110.245:8080
+[93m02:56:21:WARNING:WU06:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:56:21:WU06:FS02:Connecting to 18.218.241.186:80
+[93m02:56:21:WARNING:WU06:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:56:21:ERROR:WU06:FS02:Exception: Could not get an assignment[0m
+02:56:36:WU03:FS01:Connecting to 65.254.110.245:8080
+[93m02:56:36:WARNING:WU03:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:56:36:WU03:FS01:Connecting to 18.218.241.186:80
+02:56:37:WU03:FS01:Assigned to work server 128.252.203.2
+02:56:37:WU03:FS01:Requesting new work unit for slot 01: READY gpu:0:GV100GL [Tesla V100 SXM2 32GB] from 128.252.203.2
+02:56:37:WU03:FS01:Connecting to 128.252.203.2:8080
+02:56:51:WU04:FS04:Starting
+[91m02:56:51:ERROR:WU04:FS04:Failed to start core: OpenCL device matching slot 4 not found, try setting 'opencl-index' manually[0m
+02:56:51:WU04:FS04:Sending unit results: id:04 state:SEND error:FAILED project:11761 run:0 clone:6320 gen:3 core:0x22 unit:0x0000000480fccb0a5e6fcf9ebc6adb1c
+02:56:51:WU04:FS04:Connecting to 128.252.203.10:8080
+02:56:51:WU07:FS04:Connecting to 65.254.110.245:8080
+[93m02:56:51:WARNING:WU07:FS04:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:56:51:WU07:FS04:Connecting to 18.218.241.186:80
+[93m02:56:52:WARNING:WU07:FS04:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:56:52:ERROR:WU07:FS04:Exception: Could not get an assignment[0m
+02:56:52:WU07:FS04:Connecting to 65.254.110.245:8080
+[93m02:56:52:WARNING:WU07:FS04:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:56:52:WU07:FS04:Connecting to 18.218.241.186:80
+[93m02:56:52:WARNING:WU07:FS04:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:56:52:ERROR:WU07:FS04:Exception: Could not get an assignment[0m
+02:57:02:WU01:FS01:Cleaning up
+[91m02:57:02:ERROR:WU01:FS01:Exception: Failed to remove directory './work/01': boost::filesystem::remove: Device or resource busy: "./work/01/.__afs017F"[0m
+02:57:09:WU00:FS00:0xa7:Completed 20000 out of 125000 steps (16%)
+[91m02:57:12:ERROR:WU05:FS03:Exception: 10002: Received short response, expected 512 bytes, got 0[0m
+02:57:12:WU05:FS03:Connecting to 65.254.110.245:8080
+[93m02:57:13:WARNING:WU05:FS03:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+02:57:13:WU05:FS03:Connecting to 18.218.241.186:80
+[93m02:57:13:WARNING:WU05:FS03:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m02:57:13:ERROR:WU05:FS03:Exception: Could not get an assignment[0m
+02:57:25:WU04:FS04:Server responded WORK_ACK (400)
+02:57:25:WU04:FS04:Cleaning up
+[91m02:57:25:ERROR:WU04:FS04:Exception: Failed to remove directory './work/04': boost::filesystem::remove: Device or resource busy: "./work/04/.__afsEA2E"[0m
+02:57:26:WU04:FS04:Cleaning up
+[91m02:57:26:ERROR:WU04:FS04:Exception: Failed to remove directory './work/04': boost::filesystem::remove: Device or resource busy: "./work/04/.__afsEA2E"[0m
+02:57:30:WU02:FS02:Cleaning up
+[91m02:57:30:ERROR:WU02:FS02:Exception: Failed to remove directory './work/02': boost::filesystem::remove: Device or resource busy: "./work/02/.__afs01EA"[0m
+02:57:44:Caught signal SIGINT(2) on PID 30890
+02:57:44:Exiting, please wait. . .
+02:57:45:Caught signal SIGINT(2) on PID 30890
+[93m02:57:45:WARNING:Next signal will force exit[0m

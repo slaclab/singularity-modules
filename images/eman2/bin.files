@@ -119,9 +119,13 @@ e2spt_boxer22.py
 e2spt_buildsets.py
 e2spt_classaverage.py
 e2spt_classify.py
+e2spt_classify_byproj.py
 e2spt_ctf_old.py
 e2spt_eval.py
+e2spt_eval_orient.py
 e2spt_extract.py
+e2spt_extract_align.py
+e2spt_extractfromseg.py
 e2spt_fftamp.py
 e2spt_hac.py
 e2spt_intrafsc.py
@@ -159,14 +163,15 @@ e2tiltvalidate.py
 e2tomo_drawcontour.py
 e2tomo_drawcurve.py
 e2tomo_eval.py
-e2tomo_icongpu.py
+e2tomo_icongpu.py  gpu
+e2tomo_ctfraw.py
 e2tomo_showali.py
 e2tomo_stackframes.py
-e2tomogram.py
+e2tomogram.py  gpu
 e2tomopreproc.py
 e2tomoresolution.py
 e2tomoseg_buildtrainset.py
-e2tomoseg_convnet.py
+e2tomoseg_convnet.py  gpu
 e2tomoseg_preproc.py
 e2tvrecon.py
 e2unwrap3d.py

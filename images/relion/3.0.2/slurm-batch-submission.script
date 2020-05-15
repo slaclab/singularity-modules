@@ -1,0 +1,35 @@
+#!/bin/bash -l
+ 
+#SBATCH XXXqueueXXX
+#SBATCH --job-name=XXXnameXXX
+#SBATCH --ntasks XXXmpinodesXXX
+#SBATCH --cpus-per-task=XXXthreadsXXX
+#SBATCH --mem-per-cpu=XXXextra2XXX
+#SBATCH XXXextra3XXX
+#SBATCH --time=XXXextra1XXX
+#SBATCH --error=XXXerrfileXXX
+#SBATCH --output=XXXoutfileXXX
+#SBATCH XXXextra4XXX
+#SBATCH XXXextra5XXX
+ 
+# cores: XXXcoresXXX
+# dedicated: span[ptile=XXXdedicatedXXX]
+
+# debug
+echo "RELION " ${RELION_VERSION}
+echo "TMPDIR " ${TMPDIR}
+nvidia-smi
+
+# setup environment
+source /etc/profile.d/modules.sh
+export MODULEPATH=/usr/share/Modules/modulefiles:/opt/modulefiles:/afs/slac/package/singularity/modulefiles
+module purge
+module load PrgEnv-gcc
+module load slurm
+module load relion/${RELION_VERSION}
+
+# set tmpdir for relion
+#export TMPDIR=/scratch/${USER}/${LSB_JOBID}/TMPDIR/
+
+# run relion
+mpirun --mca btl self,vader,tcp  XXXcommandXXX 

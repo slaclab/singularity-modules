@@ -1,0 +1,35 @@
+# expose job wall clock limits
+export RELION_VERSION=3.0.6
+
+export RELION_MPIRUN=4
+export RELION_QSUB_NRMPI=5
+export RELION_MPI_MAX=512
+
+export RELION_ERROR_LOCAL_MPI=4
+export RELION_THREAD_MAX=2
+export RELION_QSUB_NRTHREADS=1
+
+export RELION_QSUB_EXTRA_COUNT=5
+export RELION_QSUB_EXTRA1=Walltime
+export RELION_QSUB_EXTRA1_DEFAULT="25:00"
+export RELION_QSUB_EXTRA1_HELP="Max run time of job in HH:MM"
+export RELION_QSUB_EXTRA2="Memory per MPI"
+export RELION_QSUB_EXTRA2_DEFAULT=""
+export RELION_QSUB_EXTRA2_HELP="Request the amount of memory per slot"
+export RELION_QSUB_EXTRA3="-"
+export RELION_QSUB_EXTRA3_DEFAULT=""
+export RELION_QSUB_EXTRA4="Number of GPUs per MPI"
+export RELION_QSUB_EXTRA4_DEFAULT="1"
+export RELION_QSUB_EXTRA4_HELP="Request the number of GPUs per MPI - note that this will change in the future to total number of GPUS for job"
+export RELION_QSUB_EXTRA5="Additional BSUB Directives"
+export RELION_QSUB_EXTRA5_DEFAULT='-R "span[hosts=1]"'
+export RELION_QUEUE_NAME="slacgpu"
+export RELION_QSUB_COMMAND="bsub < "
+export RELION_MINIMUM_DEDICATED=11
+export RELION_ALLOW_CHANGE_MINIMUM_DEDICATED=0
+
+# setting this to true unfortunately prevents things like particle picking etc.
+#export RELION_QUEUE_USE="false"
+
+# other envs
+export RELION_QSUB_TEMPLATE=/afs/slac/package/singularity/images/relion/${RELION_VERSION}/lsf-batch-submission_gpu.script
