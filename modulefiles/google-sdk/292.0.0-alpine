@@ -1,0 +1,3 @@
+#%Module1.0
+prepend-path PATH "/afs/slac/package/singularity/images/google-sdk/292.0.0-alpine/bin"
+conflict google-sdk

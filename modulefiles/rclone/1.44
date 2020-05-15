@@ -1,0 +1,2 @@
+#%Module1.0
+prepend-path PATH "/afs/slac/package/singularity/images/rclone/1.44/bin"

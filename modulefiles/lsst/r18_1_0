@@ -1,0 +1,3 @@
+#%Module1.0
+prepend-path PATH "/afs/slac/package/singularity/images/lsst/r18_1_0/bin"
+conflict lsst

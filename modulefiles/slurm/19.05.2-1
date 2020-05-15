@@ -1,0 +1,11 @@
+#%Module1.0#####################################################################
+##
+## Slurm modulefile
+##
+proc ModulesHelp { } {
+        puts stderr "\tAdds Slurm to your PATH environment variable\n"
+}
+
+module-whatis   "adds Slurm to your PATH environment variable"
+
+prepend-path    PATH   /opt/slurm/slurm-19-05-2-1/bin/
