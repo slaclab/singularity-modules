@@ -32,9 +32,18 @@
 
 
 TEMPLATE=images/TEMPLATE
+SEARCHPATH=.
+if [ ! -z $1 ]; then
+  echo "generating $1";
+  SEARCHPATH=$1
+fi
 
-for img in `find . -name '*.*img'`; do
-  echo =========
+for img in `find ${SEARCHPATH} -name '*.*img' -or -name '*.sif' | sed -E "s/\^.*\.(sif|s?img)/.\1/g" | uniq`; do
+  #img=$(pwd) . '/' . ${img}
+  if [ "${SEARCHPATH}" != "." ]; then
+    img=./${img}
+  fi
+  echo "=========" . ${img}
   IFS=/ read -a arr <<< "$img"
   app=${arr[2]}
   echo ' app     : ' ${app}
@@ -56,18 +65,28 @@ for img in `find . -name '*.*img'`; do
     args=($line)
     bin=${args[0]}
     gpu=$( case "${args[@]}" in  *"gpu"*) echo "found" ;; esac )
+    lsf=$( case "${args[@]}" in  *"lsf"*) echo "found" ;; esac )
+    slurm=$( case "${args[@]}" in  *"slurm"*) echo "found" ;; esac )
     cp -f ${TEMPLATE} ${app_path}/bin/$bin    
     echo '  -- ' $bin "  gpu: " $gpu
     sed -i "s:^IMAGE=.*$:IMAGE=${image_path}:g" ${app_path}/bin/$bin
     if [ "$gpu" == "found" ]; then
       sed -i "s:^GPU=.*$:GPU=--nv:g" ${app_path}/bin/$bin
    fi
+   if [ "$lsf" == "found" ]; then
+      sed -i "s:^LSF=.*$:LSF=1:g" ${app_path}/bin/$bin
+   fi
+   if [ "$slurm" == "found" ]; then
+      sed -i "s:^SLURM=.*$:SLURM=1:g" ${app_path}/bin/$bin
+   fi
   done < "$bin_files"
 
-  module_file=modules/${app}\@${version}
+  mkdir -p modulefiles/${app}
+  module_file=modulefiles/${app}\/${version}
   cat << EOF > ${module_file}
 #%Module1.0
 prepend-path PATH "$app_path/bin"
+conflict $app
 EOF
 
 done
