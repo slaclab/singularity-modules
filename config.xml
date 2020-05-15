@@ -1,0 +1,8 @@
+<config>
+  <!-- Folding Slots -->
+  <slot id='0' type='CPU'/>
+  <slot id='1' type='GPU'/>
+  <slot id='2' type='GPU'/>
+  <slot id='3' type='GPU'/>
+  <slot id='4' type='GPU'/>
+</config>

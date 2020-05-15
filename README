@@ -1,0 +1,16 @@
+2018-03-14 09:58:29 PDT - Wei Yang Additional comments
+received from: yangw@slac.stanford.edu<mailto:yangw@slac.stanford.edu>
+
+Hi Renata,
+
+Can we update singularity rpms on centos7 interactive login pool (cent7[a-d]) and the deft cluster? Currently we have singularity 2.3.1. It is possible that we need to
+uninstall it first. Singularity 2.4.2 has two rpms. They can be found at
+
+http://linuxsoft.cern.ch/wlcg/centos7/x86_64/singularity-2.4.2-1.osg34.el7.x86_64.rpm
+http://linuxsoft.cern.ch/wlcg/centos7/x86_64/singularity-runtime-2.4.2-1.osg34.el7.x86_64.rpm
+
+Many thanks!
+
+regards,
+--
+Wei Yang | yangw@slac.stanford.edu | 650-926-3338(O)
