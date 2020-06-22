@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.2-devel-ubuntu18.04
+FROM nvidia/cuda:10.1-devel-ubuntu18.04
 
 ###
 # munge
@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
 ##
 ARG ARCH="haswell"
 
-ARG OMPI_VERSION=v4.0.1
+ARG OMPI_VERSION=v4.0.3
 RUN TMPDIR=`mktemp -d -t` \
   && cd ${TMPDIR} \
   && git clone https://github.com/open-mpi/ompi.git \
@@ -75,17 +75,17 @@ RUN cd /usr/local \
 # install gctf
 ###
 RUN cd /usr/local/bin \
-  && curl https://www.mrc-lmb.cam.ac.uk/kzhang/Gctf/Gctf_v1.18_b2/bin/Gctf_v1.18_b2_sm35_cu9.2 > Gctf \
+  && curl -L 'https://www2.mrc-lmb.cam.ac.uk/download/special-version-for-phase-plate-gctf_v1-18/?ind=yndDYu9k8MK4JkGOF3ALgjR2Q26CZ1UnJsXiu1KoqDIbgwcG1ixt_ITnWIHyD6ekyJBvTuXDGBMwDp6gCDs2Bmdubm124J6bomYr4SYuo87yrU3cCeyzt1fzvJW6TWeCrCKNPsmHddUdoTu9tyR_pkLfe7hg5rW4vmP7v8pG-r3ubhgOlhkR7nQ3bodzMu8Asd2IRtVAlSKtM3I3FDBvy1hSCZ2DUFdxAxlfSeTSeKnYYjBAi3NEiof_tYbUCAfp&filename=GCTF_v1.18_sm30-75_cu10.1&wpdmdl=17951&refresh=5ef0350df0d311592800525' > Gctf \
   && chmod ugo+x /usr/local/bin/Gctf
 
 ###
 # install motioncor
 ###
 RUN cd /usr/local/bin \
-  && curl -L 'https://drive.google.com/uc?export=download&id=17dOr87lhhxGhg6xQYr4f8eo0OEo-GdUI' > MotionCor2_1.2.3.zip \
-  && unzip MotionCor2_1.2.3.zip \
-  && rm -f MotionCor2_1.2.3.zip \
-  && ln -sf MotionCor2_1.2.3-Cuda92 MotionCor2
+  && curl -L 'https://drive.google.com/uc?export=download&id=19vwXD8Fi636W83iIpKMjK4i60MyM1-Iw' > MotionCor2_1.3.2.zip \
+  && unzip MotionCor2_1.3.2.zip \
+  && rm -f MotionCor2_1.3.2.zip \
+  && ln -sf MotionCor2_1.3.2-Cuda101 MotionCor2
 
 ###
 # slurm stuff

@@ -4,6 +4,7 @@ IMAGE=/afs/slac/package/singularity/./images/relion/3.0.7/relion@3.0.7.sif
 SINGULARITY=singularity
 GPU=--nv
 LSF=1
+SLURM=
 
 ENVFILE=`dirname "$0"`/../env
 if [[ -L "${ENVFILE}" || -e "${ENVFILE}" ]]; then
@@ -21,6 +22,9 @@ MOUNTS=''
 if [ -d /gpfs ]; then
   MOUNTS='/gpfs'
 fi
+if [ -d /sdf ]; then
+  MOUNTS=$MOUNTS,/sdf
+fi
 if [ -d /nfs ]; then
   MOUNTS=$MOUNTS,/nfs
 fi
@@ -30,9 +34,17 @@ fi
 if [ -d /afs ]; then
   MOUNTS=$MOUNTS,/afs
 fi
+if [ -d /cvmfs ]; then
+  MOUNTS=$MOUNTS,/cvmfs
+fi
 
 if [ "$LSF" == "1" ]; then
   LSF=" -B /afs/slac/package/lsf:/opt/lsf "
 fi
+if [ "$SLURM" == "1" ]; then
+  if [ -e /var/run/munge/munge.socket.2 ]; then
+  SLURM=" -B /opt/slurm,/var/run/munge/munge.socket.2:/mnt/munge.socket.2 "
+  fi
+fi
 
-exec ${SINGULARITY} exec ${GPU} -B ${MOUNTS} ${LSF}  ${IMAGE} $(basename "$0")  "$@"
+exec ${SINGULARITY} exec ${GPU} -B ${MOUNTS} ${LSF} ${SLURM} ${IMAGE} $(basename "$0")  "$@"
