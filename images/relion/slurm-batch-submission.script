@@ -31,4 +31,4 @@ module load relion/${RELION_VERSION}
 #export TMPDIR=/scratch/${USER}/${LSB_JOBID}/TMPDIR/
 
 # run relion
-mpirun --mca btl tcp,self  XXXcommandXXX 
+mpirun --mca btl self,vader,tcp  XXXcommandXXX 
