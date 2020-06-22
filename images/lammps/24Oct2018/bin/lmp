@@ -19,7 +19,7 @@ if [ -e "$image" ]; then
 fi
 gpu_arch==$( /afs/slac/package/singularity/node_features.sh | grep 'GPU_GEN' )
 prefix="/usr/local/lammps/Pascal60/bin/"
-if [ "$gpu_arch" == '=GPU_GEN:VLT' ]; then
+if [[ "$gpu_arch" == '=GPU_GEN:VLT' || "$gpu_arch" == '=GPU_GEN:TUR' ]]; then
   prefix="/usr/local/lammps/Volta70/bin/"
 fi
 
