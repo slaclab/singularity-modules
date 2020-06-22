@@ -1,3 +1,0 @@
-#%Module1.0
-prepend-path PATH "/afs/slac/package/singularity/images/cryodrgn/master/bin"
-conflict cryodrgn
