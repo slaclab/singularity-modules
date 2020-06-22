@@ -22,6 +22,9 @@ MOUNTS=''
 if [ -d /gpfs ]; then
   MOUNTS='/gpfs'
 fi
+if [ -d /sdf ]; then
+  MOUNTS=$MOUNTS,/sdf
+fi
 if [ -d /nfs ]; then
   MOUNTS=$MOUNTS,/nfs
 fi
@@ -30,6 +33,9 @@ if [ -d /scratch ]; then
 fi 
 if [ -d /afs ]; then
   MOUNTS=$MOUNTS,/afs
+fi
+if [ -d /cvmfs ]; then
+  MOUNTS=$MOUNTS,/cvmfs
 fi
 
 if [ "$LSF" == "1" ]; then
