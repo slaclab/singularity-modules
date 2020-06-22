@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMAGE=/afs/slac/package/singularity/./images/motioncor2/1.2.1/motioncor2@1.2.1.simg
+IMAGE=/afs/slac/package/singularity/./images/motioncor2/1.3.2/motioncor2@1.3.2.sif
 SINGULARITY=singularity
 GPU=--nv
 LSF=
