@@ -22,6 +22,9 @@ MOUNTS=''
 if [ -d /gpfs ]; then
   MOUNTS='/gpfs'
 fi
+if [ -d /sdf ]; then
+  MOUNTS=$MOUNTS,/sdf
+fi
 if [ -d /nfs ]; then
   MOUNTS=$MOUNTS,/nfs
 fi
